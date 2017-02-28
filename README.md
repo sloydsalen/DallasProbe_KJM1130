@@ -1,2 +1,15 @@
 # DallasProbe_KJM1130
 Stuff related to my teaching in KJM1130.
+
+I workd as a lab teacher in KJM1130 (physical chemistry) as part of my obligatory teaching. Most students used the standard equippement, but two elected students used arduino, raspi and python for some of their experimental work. This was a test to determine if it was feasible to let students use homemade equippement and code in their education, and wether this would be beneficial for ther academic progress.
+
+equipement and tools:
+1) Arduino with the dallas probe (temperature measurement). Several of our experiments requires temperature measurements, and this is really simple to set up. I made a *very* simple contraption; really just a probe, a breadboard and som duct tape. The exact files uploaded etc. are sadly lost with the device (I may somehow retrieve these files later if I'm lucky), but they were the files provided by Dallas more or less without modification. The contraption was progrrammed to log T every .75 second and dump the data.
+2) Raspi with python. The raspi and the arduino were connected. Python has libraries for *EVERYTHING* and serial library was used to read data dumped to the serial port. More documentation in the code. Ideally, the students should be able to make s script like this on their own.
+3) Most effort was concentrated around teaching them how to plot and manipulate their data. Being neophyte programmers, the code they produced tended to be a bit kludgy, but it worked fine and they solved their assignements to my fullest satisfaction. They used curve fitting and similar, but they did not code these functions themselves.
+
+Overall, I'd say python can be used for absolutely all data treatment in KJM1130 as it is. There is no need to use origin or excel or anything else for any experiments. In fact, this is probably better. On the instrumental side, the arduino setup may not be ideal for all exercises. Lab 1 (hydration enthalpy of copper sulphate) is ok; thats is just measuring temperature differences. Lab 2 (phase diagrams and eutectic mixtures) is also temperature measurment, but it reqires a bit of running and quick connection. My EE-skills were not adequate for constructing an arduino device that could withstand the necessary level of abuse, so they used the standard equippement for the actual experiment. All data treatement done in python. Lab 3 is about concentration cells, and would require a galvanometer. Probably doable with an arduino, but I didn't have the time to build one. Would have been fun, though. Lab 4 was about reaction constants and the experimental setup required a conductivity probe. I have not investigatet if this is feasible with the arduino, but I suspect it would be finicky. Data treatment required knon-linear curve fitting. This was by far the most difficult programming assignement the students received, but they figured it out. I believe they learned something.
+
+All in all, I am satisfied with the project, but I would have liked to have more time available so that lab 2 and 3 could have been performed with the arduino setup.
+
+Jon H. Austad
